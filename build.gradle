@@ -22,9 +22,9 @@ repositories {
 
 dependencies {
 	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
 
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-	annotationProcessor 'org.projectlombok:lombok'
 
 	implementation 'info.picocli:picocli-spring-boot-starter:4.7.4'
 
