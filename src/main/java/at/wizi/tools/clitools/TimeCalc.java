@@ -6,16 +6,16 @@ import picocli.CommandLine;
 
 import java.util.concurrent.Callable;
 
-@CommandLine.Command(name = "timecalc")
+@CommandLine.Command(name = "timeCalc")
 public class TimeCalc implements Callable<Integer> {
 
     private static final Logger LOG = LoggerFactory.getLogger(TimeCalc.class);
 
-    @CommandLine.Option(names = {"-s", "--start"}, description = "start time")
+    @CommandLine.Option(names = {"-s", "--start"}, description = "start time", showDefaultValue = CommandLine.Help.Visibility.ALWAYS)
     private String start = "08:00";
-    @CommandLine.Option(names = {"-e", "--end"}, description = "end time", required = true)
-    private String end;
-    @CommandLine.Option(names = {"-p", "--pause"}, description = "pause in minutes")
+    @CommandLine.Option(names = {"-e", "--end"}, description = "end time", showDefaultValue = CommandLine.Help.Visibility.ALWAYS)
+    private String end = "17:00";
+    @CommandLine.Option(names = {"-p", "--pause"}, description = "pause in minutes", showDefaultValue = CommandLine.Help.Visibility.ALWAYS)
     private int pause = 0;
 
     @Override
