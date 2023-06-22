@@ -26,7 +26,6 @@ public class TimeCalc implements Callable<Integer> {
         return 0;
     }
 
-
     public static void main(String[] args) {
         int exitCode = new CommandLine(new TimeCalc()).execute(args);
         System.exit(exitCode);

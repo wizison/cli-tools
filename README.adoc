@@ -1,1 +1,11 @@
 = Spring CLI Tools
+
+== TimeCalc
+
+run class with:
+
+[source]
+----
+$ java -cp cli-tools.jar -Dloader.main=at.wizi.tools.clitools.TimeCalc org.springframework.boot.loader.PropertiesLauncher -s 08:00 -e 17:00 -p 30
+----
+
