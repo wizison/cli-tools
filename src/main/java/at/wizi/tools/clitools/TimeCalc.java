@@ -7,9 +7,9 @@ import picocli.CommandLine;
 import java.util.concurrent.Callable;
 
 @CommandLine.Command(name = "timecalc")
-public class Timecalc implements Callable<Integer> {
+public class TimeCalc implements Callable<Integer> {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Timecalc.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TimeCalc.class);
 
     @CommandLine.Option(names = {"-s", "--start"}, description = "start time")
     private String start = "08:00";
@@ -28,7 +28,7 @@ public class Timecalc implements Callable<Integer> {
 
 
     public static void main(String[] args) {
-        int exitCode = new CommandLine(new Timecalc()).execute(args);
+        int exitCode = new CommandLine(new TimeCalc()).execute(args);
         System.exit(exitCode);
     }
 }
