@@ -1,11 +1,29 @@
 = Spring CLI Tools
 
+A small console application using spring boot and picocli.
+
+run the (spring) application:
+
+[source,bash]
+----
+$ java -jar cli-tools.jar timeCalc -s 06:00 -e 16:15 -p 30
+----
+
+
+== CLI Command Beans
+Here you can find all existing command beans within the application.
+
+:sectnums:
 == TimeCalc
+Calculates the duration between two times and subtracts a pause.
 
-run class with:
-
-[source]
+=== direct call
+[source,bash]
 ----
 $ java -cp cli-tools.jar -Dloader.main=at.wizi.tools.clitools.command.TimeCalc org.springframework.boot.loader.PropertiesLauncher -s 08:00 -e 17:00 -p 30
 ----
 
+[appendix]
+== additional information
+* https://spring.io/projects/spring-boot
+* https://picocli.info/
