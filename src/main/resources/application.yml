@@ -1,3 +1,11 @@
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%-5level){green} %clr(%-36logger{36}){cyan} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-36logger{36} - %msg%n"
+  level:
+    at.wizi: info
+    org.springframework: warn
+
 spring:
   main:
     banner-mode: off

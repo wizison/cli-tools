@@ -1,13 +1,17 @@
-package at.wizi.tools.clitools;
+package at.wizi.tools.clitools.command;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import picocli.CommandLine;
 
 import java.util.concurrent.Callable;
 
+@Component(value = TimeCalc.CLI_COMMAND_BEAN_TIME_CALC)
 @CommandLine.Command(name = "timeCalc")
 public class TimeCalc implements Callable<Integer> {
+
+    public static final String CLI_COMMAND_BEAN_TIME_CALC = "timeCalc";
 
     private static final Logger LOG = LoggerFactory.getLogger(TimeCalc.class);
 

@@ -6,6 +6,6 @@ run class with:
 
 [source]
 ----
-$ java -cp cli-tools.jar -Dloader.main=at.wizi.tools.clitools.TimeCalc org.springframework.boot.loader.PropertiesLauncher -s 08:00 -e 17:00 -p 30
+$ java -cp cli-tools.jar -Dloader.main=at.wizi.tools.clitools.command.TimeCalc org.springframework.boot.loader.PropertiesLauncher -s 08:00 -e 17:00 -p 30
 ----
 
