@@ -27,6 +27,7 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
     implementation 'info.picocli:picocli-spring-boot-starter:4.7.4'
+    implementation 'org.apache.commons:commons-lang3'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
