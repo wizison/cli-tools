@@ -50,11 +50,12 @@ public class CliToolsCommandLineRunner implements CommandLineRunner, ExitCodeGen
         String cliCommandBeanName;
 
         if (args.length >= 1) {
-            if (applicationContext.containsBean(args[0])) {
+            final String firstParameter = args[0];
+            if (applicationContext.containsBean(firstParameter)) {
                 ignoreFirstParameter = true;
-                cliCommandBeanName = args[0];
+                cliCommandBeanName = firstParameter;
             } else {
-                LOG.warn("No cli command bean with name '{}' found, using default '{}'.", args[0], DEFAULT_CLI_COMMAND_BEAN);
+                LOG.warn("No cli command bean with name '{}' found, using default '{}'.", firstParameter, DEFAULT_CLI_COMMAND_BEAN);
                 LOG.info("Existing command beans are: {}", List.of(applicationContext.getBeanNamesForType(Callable.class)));
                 cliCommandBeanName = DEFAULT_CLI_COMMAND_BEAN;
             }
