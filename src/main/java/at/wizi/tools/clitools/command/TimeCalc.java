@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.concurrent.Callable;
 
 @Component(value = TimeCalc.CLI_COMMAND_BEAN_TIME_CALC)
-@CommandLine.Command(name = "timeCalc")
+@CommandLine.Command(name = TimeCalc.CLI_COMMAND_BEAN_TIME_CALC)
 public class TimeCalc implements Callable<Integer> {
 
     public static final String CLI_COMMAND_BEAN_TIME_CALC = "timeCalc";
