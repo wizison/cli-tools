@@ -27,6 +27,15 @@ Calculates the duration between two times and subtracts a pause.
 $ java -cp cli-tools.jar -Dloader.main=at.wizi.tools.clitools.command.TimeCalc org.springframework.boot.loader.PropertiesLauncher -s 08:00 -e 17:00 -p 30
 ----
 
+== TimeWork
+Calculates the end time of work with given parameters.
+
+=== direct call
+[source,bash]
+----
+$ java -cp cli-tools.jar -Dloader.main=at.wizi.tools.clitools.command.TimeWork org.springframework.boot.loader.PropertiesLauncher -s 08:00 -p 30 -w 08:15
+----
+
 [appendix]
 == additional information
 * https://spring.io/projects/spring-boot
